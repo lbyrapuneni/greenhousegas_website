@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Project Carbon: Learn about greenhouse gases, their impact on climate change, and what can be done to reduce them.">
-  <title>Project Carbon - Impact and Solutions</title>
-  <link rel="icon" type="image/x-icon" href="Squarespace-Favicon.ico">
+  <meta name="description" content="Project C.A.R.B.O.N.: Creating Accessible Resources to Benefit Our Nature">
+  <title>Project C.A.R.B.O.N. - Environmental Resources</title>
+  <link rel="icon" type="image/x-icon" href="image-removebg-preview (1).png">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
   
   <style>
   * {
@@ -21,41 +22,52 @@
     line-height: 1.6;
     font-size: 16px;
     font-weight: 400;
+    overflow-x: hidden;
   }
   
   .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 40px 0;
   }
   
   /* Header */
   header {
-    background-color: #4169e1;
-    color: white;
+    background-color: #ffffff;
+    color: #4b5faa;
     padding: 20px 0;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
   }
   
   header h1 {
-    font-size: 48px;
+    font-size: 28px;
     font-weight: 700;
+    color: #4b5faa;
   }
   
   header nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
-    margin-top: 20px;
   }
   
   header nav ul li {
-    margin: 0 20px;
+    margin-left: 30px;
   }
   
   header nav ul li a {
-    color: white;
+    color: #4b5faa;
     text-decoration: none;
     font-size: 18px;
     font-weight: 500;
@@ -63,364 +75,300 @@
   }
   
   header nav ul li a:hover {
-    color: #87cefa;
+    color: #7a8fd3;
+  }
+  
+  /* Main Content */
+  main {
+    margin-top: 80px;
+    min-height: calc(100vh - 80px - 60px);
   }
   
   /* Hero Section */
   .hero {
     background-color: #e6f3ff;
-    padding: 80px 0;
-    text-align: center;
-    border-bottom: 3px solid #4169e1;
+    padding: 100px 0;
+    text-align: left;
     position: relative;
     overflow: hidden;
   }
   
-  .hero::before,
-  .hero::after {
-    content: '';
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background-color: rgba(135, 206, 250, 0.1);
-    z-index: 0;
+  .hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   
-  .hero::before {
-    top: -100px;
-    left: -100px;
+  .hero-text {
+    flex: 1;
+    padding-right: 40px;
   }
   
-  .hero::after {
-    bottom: -100px;
-    right: -100px;
+  .hero h1 {
+    font-size: 48px;
+    color: #4b5faa;
+    margin-bottom: 20px;
   }
   
   .hero h2 {
     font-size: 36px;
-    color: #4169e1;
+    color: #4b5faa;
     margin-bottom: 20px;
-    position: relative;
-    z-index: 1;
   }
   
   .hero p {
-    font-size: 20px;
-    color: #555;
-    margin-top: 20px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    z-index: 1;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 30px;
+    max-width: 600px;
+  }
+  
+  .hero-logos {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .hero-logos img {
+    max-width: 100px;
+    height: auto;
   }
   
   /* About Section */
   .about {
-    background-color: white;
-    padding: 60px 0;
+    padding: 80px 0;
+    background-color: #ffffff;
   }
   
   .about h2 {
-    font-size: 28px;
-    text-align: center;
+    font-size: 36px;
+    color: #4b5faa;
     margin-bottom: 30px;
-    color: #4169e1;
+    text-align: center;
   }
   
   .about p {
     font-size: 18px;
-    text-align: center;
+    color: #333;
     max-width: 800px;
-    margin: 0 auto;
-    margin-bottom: 20px;
-  }
-  
-  .about ul {
-    list-style: none;
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .about ul li {
-    font-size: 18px;
-    margin-bottom: 10px;
-    flex: 1;
+    margin: 0 auto 20px;
     text-align: center;
-  }
-  
-  .about ul li::before {
-    content: "\2022";
-    color: #4169e1;
-    font-size: 30px;
-    margin-right: 10px;
-  }
-  
-  /* Impact Section */
-  .impact {
-    padding: 60px 0;
-    background-color: #e6f3ff;
-    text-align: center;
-  }
-  
-  .impact h2 {
-    font-size: 28px;
-    margin-bottom: 40px;
-    color: #4169e1;
-  }
-  
-  .cards {
-    display: flex;
-    justify-content: space-around;
-    gap: 30px;
-  }
-  
-  .card {
-    background-color: white;
-    padding: 30px;
-    width: 30%;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .card:hover {
-    transform: translateY(-10px);
-  }
-  
-  .card h3 {
-    font-size: 24px;
-    color: #4169e1;
-    margin-bottom: 15px;
-  }
-  
-  .card p {
-    font-size: 16px;
-    color: #555;
-  }
-  
-  /* Solutions Section */
-  .solutions {
-    padding: 60px 0;
-    background-color: white;
-  }
-  
-  .solutions h2 {
-    font-size: 28px;
-    text-align: center;
-    margin-bottom: 40px;
-    color: #4169e1;
-  }
-  
-  .solutions ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-  
-  .solutions ul li {
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 20px;
-    width: 45%;
-  }
-  
-  .solutions ul li::before {
-    content: "\2022";
-    color: #4169e1;
-    font-size: 25px;
-    margin-right: 10px;
-    position: relative;
-    top: -3px;
   }
   
   /* Resources Section */
   .resources {
+    padding: 80px 0;
     background-color: #e6f3ff;
-    padding: 60px 0;
-    text-align: center;
   }
   
   .resources h2 {
-    font-size: 28px;
+    font-size: 36px;
+    color: #4b5faa;
     margin-bottom: 30px;
-    color: #4169e1;
+    text-align: center;
   }
   
-  .resources ul {
-    list-style: none;
+  .resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
   }
   
-  .resources ul li {
-    font-size: 18px;
-    margin: 10px 0;
+  .resource-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
   }
   
-  .resources ul li a {
-    color: #4169e1;
+  .resource-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .resource-card h3 {
+    font-size: 24px;
+    color: #4b5faa;
+    margin-bottom: 15px;
+  }
+  
+  .resource-card p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .resource-card a {
+    display: inline-block;
+    background-color: #4b5faa;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
     text-decoration: none;
-    transition: color 0.3s ease;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
   }
   
-  .resources ul li a:hover {
-    color: #87cefa;
-  }
-  
-  .resources ul li a::before {
-    content: "\2022";
-    color: #87cefa;
-    margin-right: 10px;
+  .resource-card a:hover {
+    background-color: #7a8fd3;
   }
   
   /* Footer */
   footer {
-    background-color: #4169e1;
-    color: white;
+    background-color: #4b5faa;
+    color: #ffffff;
     padding: 20px 0;
     text-align: center;
-    margin-top: 60px;
-    font-size: 16px;
   }
   
   footer p {
     margin: 0;
-    font-size: 16px;
+    font-size: 14px;
   }
   
-  /* Curved Lines */
-  .curved-line {
-    position: absolute;
-    width: 100%;
-    height: 100px;
-    fill: none;
-    stroke: #87cefa;
-    stroke-width: 2;
-    opacity: 0.3;
+  /* Animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
   
-  .top-curve {
-    top: 0;
+  .animate-fadeInUp {
+    animation: fadeInUp 0.5s ease forwards;
   }
   
-  .bottom-curve {
-    bottom: 0;
-    transform: rotate(180deg);
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero-content {
+      flex-direction: column;
+    }
+    
+    .hero-text {
+      padding-right: 0;
+      margin-bottom: 40px;
+    }
+    
+    .hero-logos {
+      flex-wrap: wrap;
+    }
+    
+    .hero-logos img {
+      margin: 10px;
+    }
   }
   </style>
 </head>
 <body>
-
-  <!-- Header Section -->
   <header>
     <div class="container">
-      <h1>Project Carbon</h1>
+      <h1>Project C.A.R.B.O.N.</h1>
       <nav>
         <ul>
+          <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#impact">Impact</a></li>
-          <li><a href="#solutions">Solutions</a></li>
           <li><a href="#resources">Resources</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <svg class="curved-line top-curve" viewBox="0 0 1440 100" preserveAspectRatio="none">
-      <path d="M0,0 C300,80 900,80 1440,0 L1440 100 L0 100 Z"></path>
-    </svg>
-    <div class="container">
-      <h2>The Science Behind Greenhouse Gases</h2>
-      <p>Greenhouse gases trap heat in the Earth's atmosphere, contributing to global warming and climate change. Learn more about these gases and what we can do to minimize their effects.</p>
-    </div>
-    <svg class="curved-line bottom-curve" viewBox="0 0 1440 100" preserveAspectRatio="none">
-      <path d="M0,0 C300,80 900,80 1440,0 L1440 100 L0 100 Z"></path>
-    </svg>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="about">
-    <div class="container">
-      <h2>What Are Greenhouse Gases?</h2>
-      <p>Greenhouse gases (GHGs) are gases in Earth's atmosphere that trap heat. These gases allow sunlight to enter the atmosphere freely but prevent some of the heat from escaping. This phenomenon is what we call the "greenhouse effect". While this effect is natural and necessary for life on Earth, human activities, especially the burning of fossil fuels, have greatly increased the concentration of these gases, leading to global warming.</p>
-      <ul>
-        <li><strong>Carbon Dioxide (CO₂)</strong>: The most significant greenhouse gas from human activities.</li>
-        <li><strong>Methane (CH₄)</strong>: More potent than CO₂, but shorter-lived in the atmosphere.</li>
-        <li><strong>Nitrous Oxide (N₂O)</strong>: Released by agriculture and industry.</li>
-        <li><strong>Fluorinated Gases</strong>: Synthetic gases used in refrigeration and air conditioning.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Impact Section -->
-  <section id="impact" class="impact">
-    <svg class="curved-line top-curve" viewBox="0 0 1440 100" preserveAspectRatio="none">
-      <path d="M0,0 C300,80 900,80 1440,0 L1440 100 L0 100 Z"></path>
-    </svg>
-    <div class="container">
-      <h2>Impact of Greenhouse Gases</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>Global Warming</h3>
-          <p>Rising temperatures are causing glaciers to melt, sea levels to rise, and extreme weather events to become more frequent and severe.</p>
-        </div>
-        <div class="card">
-          <h3>Ocean Acidification</h3>
-          <p>Increased CO₂ levels also lead to higher levels of carbonic acid in the oceans, harming marine life such as coral reefs and shellfish.</p>
-        </div>
-        <div class="card">
-          <h3>Displacement of Communities</h3>
-          <p>Severe weather events, rising seas, and changing ecosystems can displace millions of people, especially in vulnerable coastal regions.</p>
+  <main>
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Project C.A.R.B.O.N.</h1>
+            <h2>Creating Accessible Resources to Benefit Our Nature</h2>
+            <p>Join us in our mission to provide accessible environmental resources and combat climate change through education and action.</p>
+          </div>
+          <div class="hero-logos">
+            <img src="/epa.png" alt="EPA Logo">
+            <img src="image-removebg-preview (1).png" alt="Project Carbon Logo">
+            <img src="images-removebg-preview (1).png" alt="NASA Logo">
+          </div>
         </div>
       </div>
-    </div>
-    <svg class="curved-line bottom-curve" viewBox="0 0 1440 100" preserveAspectRatio="none">
-      <path d="M0,0 C300,80 900,80 1440,0 L1440 100 L0 100 Z"></path>
-    </svg>
-  </section>
+    </section>
 
-  <!-- Solutions Section -->
-  <section id="solutions" class="solutions">
-    <div class="container">
-      <h2>Solutions to Reduce Greenhouse Gas Emissions</h2>
-      <div class="solutions-list">
-        <h3>Individual Action</h3>
-        <ul>
-          <li>Reduce energy consumption by using energy-efficient appliances.</li>
-          <li>Use public transport or carpool to reduce emissions from vehicles.</li>
-          <li>Adopt a plant-based diet or reduce meat consumption to cut methane emissions.</li>
-          <li>Plant trees and support reforestation efforts, which absorb CO₂ from the atmosphere.</li>
-        </ul>
-
-        <h3>Government & Corporate Action</h3>
-        <ul>
-          <li>Invest in renewable energy sources like solar, wind, and hydropower.</li>
-          <li>Implement carbon pricing and encourage industries to lower their carbon footprint.</li>
-          <li>Support sustainable agricultural practices to reduce deforestation and methane emissions.</li>
-          <li>Enforce stricter regulations on industrial emissions and waste management.</li>
-        </ul>
+    <section id="about" class="about">
+      <div class="container">
+        <h2>About Project C.A.R.B.O.N.</h2>
+        <p>Project C.A.R.B.O.N. is a collaborative initiative bringing together leading environmental organizations to create and distribute accessible resources on climate change, sustainability, and environmental protection.</p>
+        <p>Our goal is to empower individuals and communities with the knowledge and tools they need to make informed decisions and take action to benefit our planet.</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Resources Section -->
-  <section id="resources" class="resources">
-    <svg class="curved-line top-curve" viewBox="0 0 1440 100" preserveAspectRatio="none">
-      <path d="M0,0 C300,80 900,80 1440,0 L1440 100 L0 100 Z"></path>
-    </svg>
+    <section id="resources" class="resources">
+      <div class="container">
+        <h2>Environmental Resources</h2>
+        <div class="resources-grid">
+          <div class="resource-card">
+            <h3>Climate Data</h3>
+            <p>Access the latest climate data and research from NASA and other scientific institutions.</p>
+            <a href="#" target="_blank">Explore Data</a>
+          </div>
+          <div class="resource-card">
+            <h3>Environmental Protection</h3>
+            <p>Learn about environmental protection measures and regulations from the EPA.</p>
+            <a href="#" target="_blank">Learn More</a>
+          </div>
+          <div class="resource-card">
+            <h3>Sustainability Guides</h3>
+            <p>Discover practical guides and tips for sustainable living and reducing your carbon footprint.</p>
+            <a href="#" target="_blank">Get Started</a>
+          </div>
+          <div class="resource-card">
+            <h3>Educational Materials</h3>
+            <p>Access free educational resources on climate change and environmental science for all ages.</p>
+            <a href="#" target="_blank">Start Learning</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
     <div class="container">
-      <h2>Further Resources</h2>
-      <p>Learn more about greenhouse gases and their impact by exploring the following resources:</p>
-      <ul>
-        <li><a href="https://www.ipcc.ch/" target="_blank">IPCC - Intergovernmental Panel on Climate Change</a></li>
-        <li><a href="https://www.nrdc.org/stories/what-are-greenhouse-gases" target="_blank">NRDC - Greenhouse Gases Overview</a></li>
-        <li><a href="https://www.epa.gov/ghgemissions/global-greenhouse-gas-emissions-data" target="_blank">EPA - Global Greenhouse Gas Emissions</a></li>
-        <li><a href="https://www.climate.gov/" target="_blank">Climate.gov - Climate Change Information</a></li>
-      </ul>
+      <p>&copy; 2024 Project C.A.R.B.O.N. All rights reserved.</p>
     </div>
-    <svg class="curved-line bottom-curve" viewBox="0 0 1440 100" preserveAspectRatio="none">
-      <path d="M0,0 C300,80 900,80 1440,0 L1440 100 L0 100 Z">
+  </footer>
+
+  <script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Animate sections on scroll
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fadeInUp');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('section').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>
