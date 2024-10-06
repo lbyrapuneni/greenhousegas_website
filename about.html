@@ -5,263 +5,238 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Project C.A.R.B.O.N.: Creating Accessible Resources to Benefit Our Nature">
   <title>Project C.A.R.B.O.N. - Environmental Resources</title>
-  <link rel="icon" type="image/x-icon" href="ourlogo.png">
+  <link rel="icon" type="image/x-icon" href="image-removebg-preview (1).png">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
   
   <style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  body {
-    background-color: #f0f8ff;
-    color: #333;
-    line-height: 1.6;
-    font-size: 16px;
-    font-weight: 400;
-    overflow-x: hidden;
-  }
-  
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 0;
-  }
-  
-  /* Header */
-  header {
-    background-color: #ffffff;
-    color: #4b5faa;
-    padding: 20px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0;
-  }
-  
-  header h1 {
-    font-size: 28px;
-    font-weight: 700;
-    color: #4b5faa;
-  }
-  
-  header nav ul {
-    list-style: none;
-    display: flex;
-  }
-  
-  header nav ul li {
-    margin-left: 30px;
-  }
-  
-  header nav ul li a {
-    color: #4b5faa;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 500;
-    transition: color 0.3s ease;
-  }
-  
-  header nav ul li a:hover {
-    color: #7a8fd3;
-  }
-  
-  /* Main Content */
-  main {
-    margin-top: 80px;
-    min-height: calc(100vh - 80px - 60px);
-  }
-  
-  /* Hero Section */
-  .hero {
-    background-color: #e6f3ff;
-    padding: 100px 0;
-    text-align: left;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .hero-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .hero-text {
-    flex: 1;
-    padding-right: 40px;
-  }
-  
-  .hero h1 {
-    font-size: 48px;
-    color: #4b5faa;
-    margin-bottom: 20px;
-  }
-  
-  .hero h2 {
-    font-size: 36px;
-    color: #4b5faa;
-    margin-bottom: 20px;
-  }
-  
-  .hero p {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 30px;
-    max-width: 600px;
-  }
-  
-  .hero-logos {
-    flex: 1;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  
-  .hero-logos img {
-    max-width: 100px;
-    height: auto;
-  }
-  
-  /* About Section */
-  .about {
-    padding: 80px 0;
-    background-color: #ffffff;
-  }
-  
-  .about h2 {
-    font-size: 36px;
-    color: #4b5faa;
-    margin-bottom: 30px;
-    text-align: center;
-  }
-  
-  .about p {
-    font-size: 18px;
-    color: #333;
-    max-width: 800px;
-    margin: 0 auto 20px;
-    text-align: center;
-  }
-  
-  /* Resources Section */
-  .resources {
-    padding: 80px 0;
-    background-color: #e6f3ff;
-  }
-  
-  .resources h2 {
-    font-size: 36px;
-    color: #4b5faa;
-    margin-bottom: 30px;
-    text-align: center;
-  }
-  
-  .resources-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-  }
-  
-  .resource-card {
-    background-color: #ffffff;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-  }
-  
-  .resource-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .resource-card h3 {
-    font-size: 24px;
-    color: #4b5faa;
-    margin-bottom: 15px;
-  }
-  
-  .resource-card p {
-    font-size: 16px;
-    color: #333;
-    margin-bottom: 15px;
-  }
-  
-  .resource-card a {
-    display: inline-block;
-    background-color: #4b5faa;
-    color: #ffffff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-  }
-  
-  .resource-card a:hover {
-    background-color: #7a8fd3;
-  }
-  
-  /* Footer */
-  footer {
-    background-color: #4b5faa;
-    color: #ffffff;
-    padding: 20px 0;
-    text-align: center;
-  }
-  
-  footer p {
-    margin: 0;
-    font-size: 14px;
-  }
-  
-  /* Animations */
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
     }
-    to {
-      opacity: 1;
-      transform: translateY(0);
+
+    body {
+      background-color: #f0f8ff;
+      color: #333;
+      line-height: 1.6;
+      font-size: 16px;
+      overflow-x: hidden;
     }
-  }
-  
-  .animate-fadeInUp {
-    animation: fadeInUp 0.5s ease forwards;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
+
+    h1, h2, h3 {
+      font-family: 'Bebas Neue', cursive;
+      color: #23396d;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 0;
+    }
+
+    header {
+      background-color: #ffffff;
+      color: #23396d;
+      padding: 20px 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    header nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    header nav ul li {
+      margin-left: 30px;
+    }
+
+    header nav ul li a {
+      color: #23396d;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 500;
+      position: relative;
+    }
+
+    header nav ul li a:hover {
+      color: #7a8fd3;
+    }
+
+    header nav ul li a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background-color: #7a8fd3;
+      transition: width 0.3s ease;
+    }
+
+    header nav ul li a:hover::after {
+      width: 100%;
+    }
+
+    main {
+      margin-top: 80px;
+      min-height: calc(100vh - 80px - 60px);
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #4b5faa, #7a8fd3);
+      color: #ffffff;
+      padding: 100px 0;
+      text-align: left;
+    }
+
     .hero-content {
-      flex-direction: column;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-    
-    .hero-text {
-      padding-right: 0;
-      margin-bottom: 40px;
+
+    .hero h1 {
+      font-size: 48px;
     }
-    
-    .hero-logos {
-      flex-wrap: wrap;
+
+    .hero h2 {
+      font-size: 36px;
     }
-    
+
+    .hero p {
+      font-size: 18px;
+      max-width: 600px;
+    }
+
     .hero-logos img {
-      margin: 10px;
+      max-width: 100px;
+      height: auto;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      opacity: 1;
     }
-  }
+
+    .hero-logos img:hover {
+      transform: scale(1.1);
+    }
+
+    .about, .resources {
+      padding: 80px 0;
+    }
+
+    .about {
+      background-color: #ffffff;
+    }
+
+    .about p {
+      font-size: 18px;
+      max-width: 800px;
+      margin: 0 auto 20px;
+      text-align: center;
+    }
+
+    .resources {
+      background-color: #f0f0f8;
+    }
+
+    .resources h2 {
+      text-align: center;
+    }
+
+    .resources-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .resource-card {
+      background: linear-gradient(135deg, #4b5faa, #7a8fd3);
+      color: #ffffff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 280px;
+    }
+
+    .resource-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .resource-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .resource-card p {
+      font-size: 16px;
+      flex-grow: 1;
+    }
+
+    .resource-card a {
+      align-self: flex-start;
+      background-color: #ffffff;
+      color: #4b5faa;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .resource-card a:hover {
+      background-color: #4b5faa;
+      color: #ffffff;
+    }
+
+    footer {
+      background-color: #4b5faa;
+      color: #ffffff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .hero-content {
+        flex-direction: column;
+      }
+
+      .hero-text {
+        margin-bottom: 40px;
+      }
+
+      .hero-logos {
+        flex-wrap: wrap;
+      }
+
+      .hero-logos img {
+        margin: 10px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -272,7 +247,7 @@
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#resources">Resources</a></li>
+          <li><a href="#resources">Datasets</a></li>
         </ul>
       </nav>
     </div>
@@ -289,8 +264,8 @@
           </div>
           <div class="hero-logos">
             <img src="/epa.png" alt="EPA Logo">
-            <img src="ourlogo.png" alt="Project Carbon Logo">
-            <img src="nasa.png" alt="NASA Logo">
+            <img src="image-removebg-preview (1).png" alt="Project Carbon Logo">
+            <img src="images-removebg-preview (1).png" alt="NASA Logo">
           </div>
         </div>
       </div>
@@ -298,35 +273,34 @@
 
     <section id="about" class="about">
       <div class="container">
-        <h2>About Project C.A.R.B.O.N.</h2>
-        <p>Project C.A.R.B.O.N. is a collaborative initiative bringing together leading environmental organizations to create and distribute accessible resources on climate change, sustainability, and environmental protection.</p>
-        <p>Our goal is to empower individuals and communities with the knowledge and tools they need to make informed decisions and take action to benefit our planet.</p>
+        <h2 style="text-align: center;">About Project C.A.R.B.O.N.</h2>
+        <p>Project C.A.R.B.O.N. collaborates with environmental organizations to provide accessible resources on climate change, sustainability, and environmental protection.</p>
       </div>
     </section>
 
     <section id="resources" class="resources">
       <div class="container">
-        <h2>Environmental Resources</h2>
+        <h2>DATASETS USED</h2>
         <div class="resources-grid">
           <div class="resource-card">
-            <h3>Climate Data</h3>
-            <p>Access the latest climate data and research from NASA and other scientific institutions.</p>
-            <a href="#" target="_blank">Explore Data</a>
+            <h3>Global CO2 Emissions & Removals</h3>
+            <p>Annual CO₂ net fluxes, fossil fuel emissions, and crop trade impacts from 2015-2020.</p>
+            <a href="https://earth.gov/ghgcenter/data-catalog/oco2-mip-co2budget-yeargrid-v1" target="_blank">Explore Data</a>
           </div>
           <div class="resource-card">
-            <h3>Environmental Protection</h3>
-            <p>Learn about environmental protection measures and regulations from the EPA.</p>
-            <a href="#" target="_blank">Learn More</a>
+            <h3>Global Carbon Fluxes</h3>
+            <p>Daily and monthly carbon flux data from NPP, respiration, and wildfire emissions.</p>
+            <a href="https://earth.gov/ghgcenter/data-catalog/micasa-carbonflux-grid-v1" target="_blank">Explore Data</a>
           </div>
           <div class="resource-card">
-            <h3>Sustainability Guides</h3>
-            <p>Discover practical guides and tips for sustainable living and reducing your carbon footprint.</p>
-            <a href="#" target="_blank">Get Started</a>
+            <h3>Global Methane Emissions</h3>
+            <p>Monthly methane emissions data from microbial, fossil, and pyrogenic sources.</p>
+            <a href="https://earth.gov/ghgcenter/data-catalog/tm54dvar-ch4flux-monthgrid-v1" target="_blank">Explore Data</a>
           </div>
           <div class="resource-card">
-            <h3>Educational Materials</h3>
-            <p>Access free educational resources on climate change and environmental science for all ages.</p>
-            <a href="#" target="_blank">Start Learning</a>
+            <h3>EPA 2022 Greenhouse Gas Report</h3>
+            <p>Summary of reported greenhouse gas emissions by gas type and industry.</p>
+            <a href="https://www.epa.gov/ghgreporting/data-sets" target="_blank">Explore Data</a>
           </div>
         </div>
       </div>
@@ -350,24 +324,30 @@
       });
     });
 
-    // Animate sections on scroll
-    const observerOptions = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.1
-    };
+    // GSAP animations for hero section images
+    gsap.from(".hero h1", { duration: 1, y: -50, opacity: 0 });
+    gsap.from(".hero h2", { duration: 1, y: -50, opacity: 0, delay: 0.2 });
+    gsap.from(".hero p", { duration: 1, y: -50, opacity: 0, delay: 0.4 });
+    gsap.from(".hero-logos img", { duration: 1, scale: 0.5, opacity: 0, stagger: 0.3, clearProps: "opacity,transform" });
 
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate-fadeInUp');
-          observer.unobserve(entry.target);
-        }
+    // GSAP hover animation for nav links
+    document.querySelectorAll('header nav ul li a').forEach(link => {
+      link.addEventListener('mouseenter', () => {
+        gsap.to(link, { scale: 1.1, duration: 0.3 });
       });
-    }, observerOptions);
+      link.addEventListener('mouseleave', () => {
+        gsap.to(link, { scale: 1, duration: 0.3 });
+      });
+    });
 
-    document.querySelectorAll('section').forEach(section => {
-      observer.observe(section);
+    // Animate resource cards
+    document.querySelectorAll('.resource-card').forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        gsap.to(card, { scale: 1.05, duration: 0.3 });
+      });
+      card.addEventListener('mouseleave', () => {
+        gsap.to(card, { scale: 1, duration: 0.3 });
+      });
     });
   </script>
 </body>
