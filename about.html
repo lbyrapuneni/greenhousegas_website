@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about greenhouse gases, their impact on climate change, and what can be done to reduce them.">
+  <title>Greenhouse Gases - Impact and Solutions</title>
+  <link rel="icon" type="image/x-icon" href="Squarespace-Favicon.ico">
+  
+   <style>
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Header */
+  header {
+    background-color: #2a9d8f;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  header h1 {
+    font-size: 32px;
+    font-weight: 700;
+  }
+  
+  header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  header nav ul li {
+    margin: 0 20px;
+  }
+  
+  header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  header nav ul li a:hover {
+    color: #e76f51;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background-color: #e1f1f3;
+    padding: 80px 0;
+    text-align: center;
+    border-bottom: 3px solid #2a9d8f;
+  }
+  
+  .hero h2 {
+    font-size: 36px;
+    color: #2a9d8f;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 20px;
+    color: #555;
+    margin-top: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* About Section */
+  .about {
+    background-color: white;
+    padding: 60px 0;
+  }
+  
+  .about h2 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .about p {
+    font-size: 18px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  
+  .about ul {
+    list-style: none;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .about ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    flex: 1;
+    text-align: center;
+  }
+  
+  .about ul li::before {
+    content: "\2022";
+    color: #2a9d8f;
+    font-size: 30px;
+    margin-right: 10px;
+  }
+  
+  /* Impact Section */
+  .impact {
+    padding: 60px 0;
+    background-color: #e7f5e6;
+    text-align: center;
+  }
+  
+  .impact h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+  
+  .cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+  }
+  
+  .card {
+    background-color: white;
+    padding: 30px;
+    width: 30%;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .card h3 {
+    font-size: 24px;
+    color: #2a9d8f;
+    margin-bottom: 15px;
+  }
+  
+  .card p {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  /* Solutions Section */
+  .solutions {
+    padding: 60px 0;
+  }
+  
+  .solutions h2 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .solutions ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .solutions ul li {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+    width: 45%;
+  }
+  
+  .solutions ul li::before {
+    content: "\2022";
+    color: #2a9d8f;
+    font-size: 25px;
+    margin-right: 10px;
+    position: relative;
+    top: -3px;
+  }
+  
+  /* Resources Section */
+  .resources {
+    background-color: white;
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .resources h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  .resources ul {
+    list-style: none;
+  }
+  
+  .resources ul li {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .resources ul li a {
+    color: #2a9d8f;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .resources ul li a:hover {
+    color: #e76f51;
+  }
+  
+  .resources ul li a::before {
+    content: "\2022";
+    color: #e76f51;
+    margin-right: 10px;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #2a9d8f;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 60px;
+    font-size: 16px;
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  
+   </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <div class="container">
+      <h1>Greenhouse Gases: Impact & Solutions</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#impact">Impact</a></li>
+          <li><a href="#solutions">Solutions</a></li>
+          <li><a href="#resources">Resources</a></li>
+          <li><a href="#data">Data</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h2>The Science Behind Greenhouse Gases</h2>
+      <p>Greenhouse gases trap heat in the Earth's atmosphere, contributing to global warming and climate change. Learn more about these gases and what we can do to minimize their effects.</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>What Are Greenhouse Gases?</h2>
+      <p>Greenhouse gases (GHGs) are gases in Earth's atmosphere that trap heat. These gases allow sunlight to enter the atmosphere freely but prevent some of the heat from escaping. This phenomenon is what we call the "greenhouse effect". While this effect is natural and necessary for life on Earth, human activities, especially the burning of fossil fuels, have greatly increased the concentration of these gases, leading to global warming.</p>
+      <ul>
+        <li><strong>Carbon Dioxide (CO₂)</strong>: The most significant greenhouse gas from human activities.</li>
+        <li><strong>Methane (CH₄)</strong>: More potent than CO₂, but shorter-lived in the atmosphere.</li>
+        <li><strong>Nitrous Oxide (N₂O)</strong>: Released by agriculture and industry.</li>
+        <li><strong>Fluorinated Gases</strong>: Synthetic gases used in refrigeration and air conditioning.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Impact Section -->
+  <section id="impact" class="impact">
+    <div class="container">
+      <h2>Impact of Greenhouse Gases</h2>
+      <p>As the concentration of greenhouse gases in the atmosphere increases, so does the global temperature. This has wide-reaching effects on ecosystems, weather patterns, and human societies.</p>
+      <div class="cards">
+        <div class="card">
+          <h3>Global Warming</h3>
+          <p>Rising temperatures are causing glaciers to melt, sea levels to rise, and extreme weather events to become more frequent and severe.</p>
+        </div>
+        <div class="card">
+          <h3>Ocean Acidification</h3>
+          <p>Increased CO₂ levels also lead to higher levels of carbonic acid in the oceans, harming marine life such as coral reefs and shellfish.</p>
+        </div>
+        <div class="card">
+          <h3>Displacement of Communities</h3>
+          <p>Severe weather events, rising seas, and changing ecosystems can displace millions of people, especially in vulnerable coastal regions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solutions Section -->
+  <section id="solutions" class="solutions">
+    <div class="container">
+      <h2>Solutions to Reduce Greenhouse Gas Emissions</h2>
+      <p>There are several actions we can take to mitigate the effects of greenhouse gases. These actions range from individual efforts to global policy changes.</p>
+      <div class="solutions-list">
+        <h3>Individual Action</h3>
+        <ul>
+          <li>Reduce energy consumption by using energy-efficient appliances.</li>
+          <li>Use public transport or carpool to reduce emissions from vehicles.</li>
+          <li>Adopt a plant-based diet or reduce meat consumption to cut methane emissions.</li>
+          <li>Plant trees and support reforestation efforts, which absorb CO₂ from the atmosphere.</li>
+        </ul>
+
+        <h3>Government & Corporate Action</h3>
+        <ul>
+          <li>Invest in renewable energy sources like solar, wind, and hydropower.</li>
+          <li>Implement carbon pricing and encourage industries to lower their carbon footprint.</li>
+          <li>Support sustainable agricultural practices to reduce deforestation and methane emissions.</li>
+          <li>Enforce stricter regulations on industrial emissions and waste management.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resources Section -->
+  <section id="resources" class="resources">
+    <div class="container">
+      <h2>Further Resources</h2>
+      <p>Learn more about greenhouse gases and their impact by exploring the following resources:</p>
+      <ul>
+        <li><a href="https://www.ipcc.ch/" target="_blank">IPCC - Intergovernmental Panel on Climate Change</a></li>
+        <li><a href="https://www.nrdc.org/stories/what-are-greenhouse-gases" target="_blank">NRDC - Greenhouse Gases Overview</a></li>
+        <li><a href="https://www.epa.gov/ghgemissions/global-greenhouse-gas-emissions-data" target="_blank">EPA - Global Greenhouse Gas Emissions</a></li>
+        <li><a href="https://www.climate.gov/" target="_blank">Climate.gov - Climate Change Information</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Data Section -->
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Greenhouse Gases Awareness. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
